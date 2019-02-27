@@ -14,27 +14,14 @@ class connector:
         self.CondAlarmApi = intersight.CondAlarmApi(api_instance)
         self.HyperflexAlarmApi = intersight.HyperflexAlarmApi(api_instance)
     
+    def pull_all():
+        network_elements = networkelemApi.network_elements_get()
+        compute_rack_units = rackApi.compute_rack_units_get()
+        hyperflex_clusters = hxclustersApi.hyperflex_clusters_get()
+        cond_alarms = alarmApi.cond_alarms_get()
+        hyperflex_alarms = alarmApi.hyperflex_alarms_get()
     
     
-    
-    
-    
-    
-    #networkelemApi = intersight.NetworkElementApi(api_instance)
-#intersight_networkelems = networkelemApi.network_elements_get()
-#
-#rackApi = intersight.ComputeRackUnitApi(api_instance)
-#intersight_racks = rackApi.compute_rack_units_get()
-#
-#hxclustersApi = intersight.HyperflexClusterApi(api_instance)
-#intersight_clusters = hxclustersApi.hyperflex_clusters_get()
-#
-#alarmApi = intersight.CondAlarmApi(api_instance)
-#intersight_alarms = alarmApi.cond_alarms_get()
-#
-#alarmApi = intersight.HyperflexAlarmApi(api_instance)
-#hx_alarms = alarmApi.hyperflex_alarms_get()
-#
 #for net in intersight_networkelems.results:
 #    #print(net.device_mo_id)
 #    #print(net.ucsm_running_firmware)
