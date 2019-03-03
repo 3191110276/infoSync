@@ -1,2 +1,3 @@
 credentials.yaml
 keyfile.txt
+*.pyc
