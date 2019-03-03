@@ -3,12 +3,21 @@
 
 class connector:
     def __init__(self, instance, user, pwd):
+        self.type = 'ServiceNow'
+        
         self.url = 'https://' + instance + '.service-now.com/api/now/table/'
         self.user = user
         self.pwd = pwd
-    
-    def pull_all():
         
+        self.current_state = {
+            'tickets': []
+        }
+        self.previous_state = {
+            'tickets': []
+        }
+    
+    def pull_all(self):
+        pass
         
         
         
@@ -195,4 +204,3 @@ class connector:
 #    #print(data)
 #
 #    
-##--------------------------------------------------------------------------------------------------------------------
